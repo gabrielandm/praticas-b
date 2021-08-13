@@ -8,6 +8,7 @@ const cases = [
             'Breck Vlam'
         ],
         progress: 33,
+        levelId: '000',
     },
     {
         name: 'Caso Mousse',
@@ -18,6 +19,7 @@ const cases = [
             'Breck Vlam'
         ],
         progress: 33,
+        levelId: '001',
     },
     {
         name: 'Caso Mousse',
@@ -28,6 +30,7 @@ const cases = [
             'Breck Vlam'
         ],
         progress: 33,
+        levelId: '002',
     },
     {
         name: 'Caso Mousse',
@@ -38,9 +41,26 @@ const cases = [
             'Breck Vlam'
         ],
         progress: 33,
+        levelId: '003',
     },
 
 ]
+
+//--- GLOBAL VARIABLES ---//
+// Bool - if level is selected
+let levelSelected = false;
+
+function cardSelector(id) {
+    document.getElementById('level-0').className = "case-page case";
+    document.getElementById('level-1').className = "case-page case";
+    document.getElementById('level-2').className = "case-page case";
+    document.getElementById('level-3').className = "case-page case";
+
+    let selected = document.getElementById(`${id}`)
+    selected.className += " selected";
+
+    generatePlayButton(id)
+}
 
 function generate_cases(cases) {
     let casesListHolder = document.getElementById('casesList');
@@ -69,8 +89,14 @@ function generate_cases(cases) {
             | |-caseProgressTitle
             | |-caseProgressBar
         */
+
         let caseCointainer = document.createElement('DIV');
         caseCointainer.className = "case-page case";
+        caseCointainer.id = `level-${i}`;
+        caseCointainer.onclick = () => {cardSelector(caseCointainer.id)};
+        let levelIdAttribute = document.createAttribute("levelId");
+        levelIdAttribute.value = cases[i].levelId;
+        caseCointainer.setAttributeNode(levelIdAttribute);
 
         let caseRowHeader = document.createElement('DIV');
         caseRowHeader.className = "case-row";
@@ -175,3 +201,31 @@ function generate_cases(cases) {
 }
 
 generate_cases(cases);
+
+
+function generatePlayButton(id) {
+    let levelId = document.getElementById(`${id}`).getAttribute('levelId');
+
+    try {
+        let playButton = document.getElementById('playButton');
+        playButton.onclick = () => {onPlayClick(levelId)};
+    }
+    catch {
+        let playButtonHolder = document.createElement('DIV');
+        playButtonHolder.id = 'playButton';
+        playButtonHolder.className = "play-button";
+        playButtonHolder.onclick = () => {onPlayClick(levelId)};
+    
+        let caseRowHeader = document.createElement('IMG');
+        caseRowHeader.alt = "Jogar Caso 1";
+        caseRowHeader.src = "./images/level_select/Jogar 1.png";
+    
+        playButtonHolder.appendChild(caseRowHeader);
+    
+        document.getElementById('buttonHolder').appendChild(playButtonHolder);
+    }
+}
+
+function onPlayClick(levelId) {
+    console.log(levelId);
+}

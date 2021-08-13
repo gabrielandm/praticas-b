@@ -1,3 +1,5 @@
+/* @media (min-width: 700px) {} */
+
 body {
     background-color: rgb(36, 36, 36);
     -webkit-touch-callout: none;
@@ -6,6 +8,23 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+@font-face {
+    font-family: typewriter;
+    src: url('../fonts/JMH Typewriter.ttf');
+}
+
+@font-face {
+    font-family: typewriter-thin;
+    font-weight: thin;
+    src: url('../fonts/JMH Typewriter-Thin.ttf');
+}
+
+@font-face {
+    font-family: typewriter-bold;
+    font-weight: bold;
+    src: url('../fonts/JMH Typewriter-Bold.ttf');
 }
 
 .game-screen {
@@ -32,6 +51,14 @@ body {
     /* border-style: solid;
     border-width: 1px;
     border-color: rgb(212, 0, 255); */
+}
+
+.title h1 {
+    font-family: typewriter-bold;
+    font-size: 3.5em;
+    color: #af9f7c;
+    /* color: #7c735a; */
+    filter: drop-shadow(8px 10px 5px #00000065);
 }
 
 .cases-list {
@@ -103,4 +130,12 @@ body {
 
 .shadow {
     filter: drop-shadow(8px 25px 15px #00000065);
+}
+
+.selected {
+    /* Help viewing */
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 6px;
+    border-color: #af9f7c;
 }
