@@ -9,6 +9,36 @@ const cases = [
         ],
         progress: 33,
     },
+    {
+        name: 'Caso Mousse',
+        description: 'No último dia 10, uma loja foi roubada e o dono assassinado',
+        nextSteps: 'Já foram encontradas 2 pistas que nos apontará qual dos suspeitos cometeu o crime. Investigue e nos informe o mais rápido possível!',
+        suspects: [
+            'Sthephan Clir',
+            'Breck Vlam'
+        ],
+        progress: 33,
+    },
+    {
+        name: 'Caso Mousse',
+        description: 'No último dia 10, uma loja foi roubada e o dono assassinado',
+        nextSteps: 'Já foram encontradas 2 pistas que nos apontará qual dos suspeitos cometeu o crime. Investigue e nos informe o mais rápido possível!',
+        suspects: [
+            'Sthephan Clir',
+            'Breck Vlam'
+        ],
+        progress: 33,
+    },
+    {
+        name: 'Caso Mousse',
+        description: 'No último dia 10, uma loja foi roubada e o dono assassinado',
+        nextSteps: 'Já foram encontradas 2 pistas que nos apontará qual dos suspeitos cometeu o crime. Investigue e nos informe o mais rápido possível!',
+        suspects: [
+            'Sthephan Clir',
+            'Breck Vlam'
+        ],
+        progress: 33,
+    },
 
 ]
 
