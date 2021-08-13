@@ -81,3 +81,15 @@ body{
 .shadow{
     filter: drop-shadow(8px 25px 15px #00000065);
 }
+
+.logo{
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    z-index: 0;
+}
+
+.logo-text{
+    transform: translateZ(20px);
+    z-index: 10;
+    margin-top: -33%;
+}
