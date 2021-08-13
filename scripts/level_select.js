@@ -5,7 +5,7 @@ const cases = [
         nextSteps: 'Já foram encontradas 2 pistas que nos apontará qual dos suspeitos cometeu o crime. Investigue e nos informe o mais rápido possível!',
         suspects: [
             'Sthephan Clir',
-            'Breck Vlam'
+            'Mousse'
         ],
         progress: 33,
         levelId: '000',
