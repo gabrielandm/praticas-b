@@ -1,0 +1,197 @@
+.case-page {
+    display: flex;
+    flex-direction: column;
+    width: 297px;
+    height: 392px;
+    /* Animation transition speed */
+    transition: all 0.3s ease;
+    /* Background */
+    background-image: url(../images/level_select/case_background_1.png);
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case {
+    transition: all 0.3s ease;
+    filter: drop-shadow(8px 25px 15px #00000065);
+}
+
+.case:hover {
+    cursor: pointer;
+    transform: scale(1.05) perspective(1px);
+    filter: drop-shadow(8px 25px 25px #00000065);
+}
+
+.case-row {
+    display: flex;
+    flex-direction: row;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-image {
+    display: flex;
+    width: 78px;
+    height: 78px;
+    margin: 38px 0px 0px 33px;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-description {
+    display: flex;
+    width: 100%;
+    margin: 38px 33px 0px 10px;
+    flex-direction: column;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-description h3 {
+    margin: 0px;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-description p {
+    margin: 0px;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-steps {
+    display: flex;
+    margin: 15px 33px 0px 33px;
+    flex-direction: column;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-steps h3 {
+    margin: 0px;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-steps p {
+    margin: 0px;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-suspects {
+    margin: 15px 0px 0px 33px;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-suspects h3 {
+    margin: 0px;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-suspects p {
+    margin: 0px;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-signature {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px 0px 33px;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-signature h3 {
+    margin: 0px;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-signature img {
+    margin: 0px;
+    width: 50px;
+    align-self: center;
+    height: auto;
+    object-fit: cover;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-progress {
+    margin: 15px 33px 38px 33px;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-progress h3 {
+    margin: 0px;
+    text-align: center;
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-progress progress {
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+    /* Help viewing */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #7d7458;
+}
+
+.case-progress progress:after {
+    display: flex;
+    color: #7d7458;
+    margin-top: -7%;
+    padding: 0% 48% 0% 45%;
+    content: attr(value)"%";
+    /* Help viewing */
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 0, 255); */
+}
+
+.case-progress progress::-webkit-progress-value {
+    background-color: #9e936f;
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
