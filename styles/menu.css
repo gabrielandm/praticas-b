@@ -1,6 +1,15 @@
-body{
-    background-color: rgb(36, 36, 36);
+/*
+    [ ] 640×480
+    [X] 800×600
+    [ ] 960×720
+    [X] 1024×768
+    [ ] 1280×960
+    [ ] 1400×1050
+    [X] 1440×1080
+*/
 
+body {
+    background-color: rgb(36, 36, 36);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -9,87 +18,263 @@ body{
     user-select: none;
 }
 
-.game-screen{
+.game-screen {
     display: flex;
-    width: 1280px;
-    height: 720px;
+    width: 800px;
+    height: 600px;
     background-image: url("../images/menu/Background.png");
-
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    background-color: #40332f;
     /* Flex box ordering */
     flex-direction: column;
-
     /* Help viewing */
     /* border-style: solid;
     border-width: 1px;
     border-color: rgb(212, 0, 255); */
 }
 
-.game-title{
+.game-title {
     display: flex;
     width: 600px;
     height: 200px;
-
     /* Flex positioning */
     align-self: center;
-
     /* Help viewing */
     /* border-style: solid;
     border-width: 1px;
     border-color: rgb(212, 0, 255); */
 }
 
-.title-list{
+.title-list {
     display: flex;
 }
 
-.buttons-list{
+.buttons-list {
     height: 100%;
     padding: 0% 0% 1.5% 0%;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    
     /* Help viewing */
     /* border-style: solid;
     border-width: 1px;
     border-color: rgb(0, 162, 255); */
 }
 
-.menu-button{
+.menu-button {
     display: flex;
-    width: 280px;
-    height: 80px;
-
+    width: 210px;
+    height: 60px;
     transition: all 0.3s ease;
-    
     /* Help viewing */
     /* border-style: solid;
     border-width: 1px;
     border-color: rgb(212, 0, 255); */
 }
 
-.menu-button:hover{
-    cursor: pointer;
+.menu-button img {
+    width: 140px;
+    height: auto;
+}
 
+.menu-button:hover {
+    cursor: pointer;
     transform: scale(1.15) perspective(1px);
     margin-left: 20px;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
-.shadow{
+.shadow {
     filter: drop-shadow(8px 25px 15px #00000065);
 }
 
-.logo{
+.logo {
     transform-style: preserve-3d;
     transform: perspective(1000px);
     z-index: 0;
 }
 
-.logo-text{
+.logo-text {
     transform: translateZ(20px);
     z-index: 10;
     margin-top: -33%;
+}
+
+@media (min-width: 1045px) and (min-height: 785px) {
+    body {
+        background-color: rgb(36, 36, 36);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .game-screen {
+        display: flex;
+        width: 1024px;
+        height: 768px;
+        background-image: url("../images/menu/Background.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100%;
+        background-color: #40332f;
+        /* Flex box ordering */
+        flex-direction: column;
+        /* Help viewing */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(212, 0, 255); */
+    }
+    .game-title {
+        display: flex;
+        width: 600px;
+        height: 200px;
+        /* Flex positioning */
+        align-self: center;
+        /* Help viewing */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(212, 0, 255); */
+    }
+    .title-list {
+        display: flex;
+    }
+    .buttons-list {
+        height: 100%;
+        padding: 0% 0% 1.5% 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* Help viewing */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(0, 162, 255); */
+    }
+    .menu-button {
+        display: flex;
+        width: 280px;
+        height: 80px;
+        transition: all 0.3s ease;
+        /* Help viewing */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(212, 0, 255); */
+    }
+    .menu-button img {
+        width: auto;
+        height: 100%;
+    }
+    .menu-button:hover {
+        cursor: pointer;
+        transform: scale(1.15) perspective(1px);
+        margin-left: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .shadow {
+        filter: drop-shadow(8px 25px 15px #00000065);
+    }
+    .logo {
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        z-index: 0;
+    }
+    .logo-text {
+        transform: translateZ(20px);
+        z-index: 10;
+        margin-top: -33%;
+    }
+}
+
+@media (min-width: 1440px) and (min-height: 1080px) {
+    body {
+        background-color: rgb(36, 36, 36);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .game-screen {
+        display: flex;
+        margin: 0% auto 0 auto;
+        width: 1440px;
+        height: 1000px;
+        background-image: url("../images/menu/Background.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100%;
+        background-color: #40332f;
+        /* Fix this color */
+        /* Flex box ordering */
+        flex-direction: column;
+        /* Help viewing */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(212, 0, 255); */
+    }
+    .game-title {
+        display: flex;
+        width: 600px;
+        height: 200px;
+        /* Flex positioning */
+        align-self: center;
+        /* Help viewing */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(212, 0, 255); */
+    }
+    .title-list {
+        display: flex;
+    }
+    .buttons-list {
+        height: 100%;
+        padding: 0% 0% 1.5% 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* Help viewing */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(0, 162, 255); */
+    }
+    .menu-button {
+        display: flex;
+        width: 280px;
+        height: 80px;
+        transition: all 0.3s ease;
+        /* Help viewing */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(212, 0, 255); */
+    }
+    .menu-button img {
+        width: auto;
+        height: 100%;
+    }
+    .menu-button:hover {
+        cursor: pointer;
+        transform: scale(1.15) perspective(1px);
+        margin-left: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .shadow {
+        filter: drop-shadow(8px 25px 15px #00000065);
+    }
+    .logo {
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        z-index: 0;
+    }
+    .logo-text {
+        transform: translateZ(20px);
+        z-index: 10;
+        margin-top: -33%;
+    }
 }
