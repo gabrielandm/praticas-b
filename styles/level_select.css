@@ -1,4 +1,8 @@
-/* @media (min-width: 700px) {} */
+:root {
+    --screen-x: 1440px; /* 1.405 */
+    --screen-y: 1080px; /* 1.405 */
+    --font-size: 1em;
+}
 
 body {
     background-color: rgb(36, 36, 36);
@@ -8,6 +12,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-size: calc(var(--font-size) / 1.405);
 }
 
 @font-face {
@@ -29,8 +34,8 @@ body {
 
 .game-screen {
     display: flex;
-    width: 1280px;
-    height: 720px;
+    width: calc(var(--screen-x) / 1.405);
+    height: calc(var(--screen-y) / 1.405);
     background-color: #40332f;
     /* Flex box ordering */
     flex-direction: column;
@@ -74,16 +79,7 @@ body {
     border-color: rgb(212, 0, 255); */
 }
 
-.case-page {
-    display: flex;
-    width: 297px;
-    height: 392px;
-    transition: all 0.3s ease;
-    /* Help viewing */
-    /* border-style: solid;
-    border-width: 1px;
-    border-color: rgb(212, 0, 255); */
-}
+
 
 .case {
     transition: all 0.3s ease;
@@ -137,4 +133,122 @@ body {
     border-width: 3px;
     border-radius: 6px;
     border-color: #af9f7c;
+}
+
+@media (min-width: 1440px) and (min-height: 1080px) {
+    body {
+        background-color: rgb(36, 36, 36);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-size: calc(var(--font-size));
+    }
+    @font-face {
+        font-family: typewriter;
+        src: url('../fonts/JMH Typewriter.ttf');
+    }
+    @font-face {
+        font-family: typewriter-thin;
+        font-weight: thin;
+        src: url('../fonts/JMH Typewriter-Thin.ttf');
+    }
+    @font-face {
+        font-family: typewriter-bold;
+        font-weight: bold;
+        src: url('../fonts/JMH Typewriter-Bold.ttf');
+    }
+    .game-screen {
+        display: flex;
+        margin: 0% auto 0 auto;
+        width: calc(var(--screen-x));
+        height: calc(var(--screen-y));
+        background-color: #40332f;
+        /* Flex box ordering */
+        flex-direction: column;
+        /* Help viewing */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(212, 0, 255); */
+    }
+    .title {
+        display: flex;
+        /* width: 600px;
+        height: 200px; */
+        /* Flex positioning */
+        align-self: center;
+        justify-content: center;
+        /* Help viewing */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(212, 0, 255); */
+    }
+    .title h1 {
+        font-family: typewriter-bold;
+        font-size: 3.5em;
+        color: #af9f7c;
+        /* color: #7c735a; */
+        filter: drop-shadow(8px 10px 5px #00000065);
+    }
+    .cases-list {
+        display: flex;
+        /* Flex positioning */
+        align-self: space-around;
+        justify-content: space-around;
+        /* Margin / Padding */
+        padding-top: 20px;
+        /* Help viewing */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(212, 0, 255); */
+    }
+    .case {
+        transition: all 0.3s ease;
+        filter: drop-shadow(8px 25px 15px #00000065);
+    }
+    .case:hover {
+        cursor: pointer;
+        /* font-size: 101.3%; */
+        transform: scale(1.1) perspective(1px);
+        filter: drop-shadow(8px 25px 25px #00000065);
+    }
+    .buttons-list {
+        height: 100%;
+        padding: 0% 0% 1.5% 0%;
+        display: flex;
+        /* Flex positioning */
+        align-self: space-around;
+        justify-content: space-around;
+        /* Margin / Padding */
+        padding-top: 50px;
+        /* Help viewing */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(0, 162, 255); */
+    }
+    .play-button {
+        display: flex;
+        width: 129px;
+        height: 49px;
+        transition: all 0.3s ease;
+        /* Help viewing */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(212, 0, 255); */
+    }
+    .play-button:hover {
+        cursor: pointer;
+        transform: scale(1.15) perspective(1px);
+    }
+    .shadow {
+        filter: drop-shadow(8px 25px 15px #00000065);
+    }
+    .selected {
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 6px;
+        border-color: #af9f7c;
+    }
 }
